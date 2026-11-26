@@ -1,0 +1,29 @@
+[project]
+name = "scrapepolicy"
+version = "0.1.0"
+description = "Inspect a website's robots.txt, sitemaps, terms of use, about and contact pages."
+readme = "README.md"
+authors = [
+    { name = "Biliarto Sastro Cemerson", email = "biliartocemerson@gmail.com" }
+]
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "httpx>=0.28.1",
+]
+
+[project.urls]
+Repository = "https://github.com/billycemerson/scrapepolicy"
+
+[project.scripts]
+scrapepolicy = "scrapepolicy.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9.25,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
